@@ -1,0 +1,17 @@
+name: test
+run-name: ${{ github.actor }} is running tests
+on: [push]
+jobs:
+  run-unit-tests:
+    runs-on: self-hosted
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          path: app
+      - name: Run tests with Thread Sanitizer
+        env:
+            SWIFT_DETERMINISTIC_HASHING: 1
+        run: swift test --parallel --sanitize=thread
+        working-directory: app
+      
