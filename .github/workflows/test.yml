@@ -27,6 +27,7 @@ jobs:
 
       - name: Test summary
         run: |
+
             echo "This is the lead in sentence for the list" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY # this is a blank line
             echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
@@ -36,13 +37,10 @@ jobs:
   hello-world:
     runs-on: self-hosted
     steps:
-      - name: Check out repository
-        uses: actions/hello-world-javascript-action@main
-        with:
-          who-to-greet: 'Mona the Octocat'
       - name: Hello
         run: |
             echo "Hello, world!"
+            echo "::notice file=test.swift,line=1,col=5,endColumn=7::Missing semicolon"
             echo "Summary example" >> $GITHUB_STEP_SUMMARY
 
       # - name: SwiftLint
