@@ -48,3 +48,11 @@ jobs:
             swift --version
             echo "print(42)" | swift -
 
+  lint:
+    runs-on: self-hosted
+    steps:
+      - name: SwiftLint
+        uses: raphaelbussa/swiftlint-action@main
+        with:
+          subcommand: lint --strict 
+
