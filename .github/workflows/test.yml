@@ -1,5 +1,5 @@
 name: test
-run-name: ${{ github.actor }} is running tests
+run-name: ${{ github.actor }} is running test workflow
 on: [push]
 jobs:
   run-unit-tests:
@@ -31,6 +31,14 @@ jobs:
             echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
             echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
       
+  hello-world:
+    runs-on: self-hosted
+    steps:
+      - name: Hello
+        run: |
+            echo "Hello, world!"
+            echo "Summary example" >> $GITHUB_STEP_SUMMARY
+
       # - name: SwiftLint
       #   uses: norio-nomura/action-swiftlint@3.2.1
 
