@@ -51,8 +51,8 @@ jobs:
   lint:
     runs-on: self-hosted
     steps:
-      - name: SwiftLint
-        uses: raphaelbussa/swiftlint-action@main
-        with:
-          subcommand: lint --strict 
+       - name: GitHub Action for SwiftLint (Different working directory)
+          uses: norio-nomura/action-swiftlint@3.2.1
+          env:
+            WORKING_DIRECTORY: Sources
 
