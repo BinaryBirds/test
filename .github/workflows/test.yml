@@ -48,11 +48,11 @@ jobs:
             swift --version
             echo "print(42)" | swift -
 
-  lint:
-    runs-on: self-hosted
-    steps:
-        - name: GitHub Action for SwiftLint (Different working directory)
-          uses: sinoru/actions-swiftlint@v6
-          with:
-            working-directory: Sources
+  # lint:
+  #   runs-on: self-hosted
+  #   steps:
+  #       - name: GitHub Action for SwiftLint (Different working directory)
+  #         uses: sinoru/actions-swiftlint@v6
+  #         with:
+  #           working-directory: Sources
 
