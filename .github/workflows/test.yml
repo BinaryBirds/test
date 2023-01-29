@@ -12,6 +12,9 @@ jobs:
       - name: Run tests with Thread Sanitizer
         env:
             SWIFT_DETERMINISTIC_HASHING: 1
-        run: swift test --parallel --sanitize=thread
+        run: swift test --parallel --enable-code-coverage --sanitize=thread
         working-directory: app
-      
+      - name: Code coverage
+        uses: maxep/spm-lcov-action@0.3.0
+        with:
+          output-file: ./coverage/lcov.info
