@@ -43,10 +43,8 @@ jobs:
             echo "::notice file=test.swift,line=1,col=5,endColumn=7::Missing semicolon"
             echo "Summary example" >> $GITHUB_STEP_SUMMARY
 
-      # - name: SwiftLint
-      #   uses: norio-nomura/action-swiftlint@3.2.1
+      - name: Swift hello
+        run: |
+            swift --version
+            echo "print(42)" | swift -
 
-      # - name: Code coverage
-      #   uses: maxep/spm-lcov-action@0.3.0
-      #   with:
-      #     output-file: ./coverage/lcov.info
