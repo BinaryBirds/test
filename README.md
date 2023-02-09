@@ -11,4 +11,8 @@ test
 | git diff     | git diff       | git diff       | 0               |  123.323s    |
 | git diff     | git diff       | git diff       | 0               |  123.323s    |
 | git diff     | git diff       | git diff       | 0               |  123.323s    |
-| git diff     | git diff       | git diff       | 0               |  123.323s    |
+| [git diff](sources/test/test.swift)     | git diff  ✅     | git diff  ❌     | 0     🔀          |  123.323s  ⌛️  |
+| git diff     | git diff  ✅     | git diff  ❌     | 0     🔀          |  123.323s  ⌛️  |
+| git diff     | git diff  ✅     | git diff  ❌     | 0     🔀          |  123.323s  ⌛️  |
+| git diff     | git diff  ✅     | git diff  ❌     | 0     🔀          |  123.323s  ⌛️  |
+| git diff     | git diff  ✅     | git diff  ❌     | 0     🔀          |  123.323s  ⌛️  |
