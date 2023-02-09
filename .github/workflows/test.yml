@@ -36,7 +36,7 @@ jobs:
             echo "---"
             echo "${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}}" >> $GITHUB_STEP_SUMMARY
             echo "---"
-            echo "[link](${{github.server_url}}/${{github.repository}}/tree/${{github.ref_name}}/Sources/test/test.swift#L4)" >> $GITHUB_STEP_SUMMARY
+            echo "[link](${{github.server_url}}/${{github.repository}}/tree/${{github.ref_name}}/Sources/test/test.swift#L4-L6)" >> $GITHUB_STEP_SUMMARY
             echo "---"
             cat app/README.md >> $GITHUB_STEP_SUMMARY
       
