@@ -33,8 +33,11 @@ jobs:
             echo "- Lets add a bullet point" >> $GITHUB_STEP_SUMMARY
             echo "- Lets add a second bullet point" >> $GITHUB_STEP_SUMMARY
             echo "- How about a third one?" >> $GITHUB_STEP_SUMMARY
-            echo "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_STEP_SUMMARY
-
+            echo "---"
+            echo "${{github.server_url}}/${{github.repository}}/actions/runs/${{github.run_id}}" >> $GITHUB_STEP_SUMMARY
+            echo "---"
+            echo "${{github.server_url}}/${{github.repository}}/Sources/test/test.swift#L4" >> $GITHUB_STEP_SUMMARY
+            echo "---"
             cat app/README.md >> $GITHUB_STEP_SUMMARY
       
   hello-world:
