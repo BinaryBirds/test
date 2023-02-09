@@ -22,7 +22,7 @@ jobs:
         run: |
             echo "::group::My title"
             echo "Inside group"
-            echo "::warning file=Sources/test/test.swift,line=6,col=29,endColumn=33::Missing semicolon"
+            echo "::warning file=.github/workflows/test.yml,line=6,col=29,endColumn=33::Missing semicolon"
             echo "::endgroup::"
 
       - name: Test summary
