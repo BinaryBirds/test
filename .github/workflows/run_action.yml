@@ -6,4 +6,4 @@ jobs:
     name: A job to run own action
     steps:
       - uses: actions/checkout@v3
-      - uses: BinaryBirds/action-xctest-report@master
+      - uses: BinaryBirds/action-xctest-report@v1.0.0
