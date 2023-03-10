@@ -1,0 +1,9 @@
+on: [push]
+
+jobs:
+  run_own_action:
+    runs-on: macos-latest
+    name: A job to run own action
+    steps:
+      - uses: actions/checkout@v3
+      - uses: BinaryBirds/action-xctest-report@1.0.0

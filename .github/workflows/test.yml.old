@@ -22,7 +22,7 @@ jobs:
         run: |
             echo "::group::My title"
             echo "Inside group"
-            echo "::warning file=Sources/test/test.swift,line=6,col=29,endColumn=33::Missing semicolon"
+            echo "::warning file=.github/workflows/test.yml,line=6,col=29,endColumn=33::Missing semicolon"
             echo "::endgroup::"
 
       - name: Test summary
@@ -49,10 +49,16 @@ jobs:
             echo "::notice file=test.swift,line=1,col=5,endColumn=7::Missing semicolon"
             echo "Summary example" >> $GITHUB_STEP_SUMMARY
 
-      # - name: SwiftLint
-      #   uses: norio-nomura/action-swiftlint@3.2.1
+      - name: Swift hello
+        run: |
+            swift --version
+            echo "print(42)" | swift -
 
-      # - name: Code coverage
-      #   uses: maxep/spm-lcov-action@0.3.0
-      #   with:
-      #     output-file: ./coverage/lcov.info
+  # lint:
+  #   runs-on: self-hosted
+  #   steps:
+  #       - name: GitHub Action for SwiftLint (Different working directory)
+  #         uses: sinoru/actions-swiftlint@v6
+  #         with:
+  #           working-directory: Sources
+
