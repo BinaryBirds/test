@@ -3,7 +3,7 @@ on: [push]
 jobs:
   run_own_action:
     runs-on: macos-latest
-    name: A jon to run own action
+    name: A job to run own action
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/action-xctest-report@master
+      - uses: actions/action-xctest-report@v1
