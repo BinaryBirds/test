@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   run_own_action:
-    runs-on: macos-latest
+    runs-on: self-hosted
     name: A job to run own action
     steps:
       - uses: actions/checkout@v3
