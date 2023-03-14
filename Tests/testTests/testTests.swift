@@ -8,6 +8,6 @@ final class testTests: XCTestCase {
     }
     
     func testTest222Example() throws {
-        XCTAssertEqual(test().text, "Hello, World!")
+        XCTAssertEqual(test().text, "1Hello, World!")
     }
 }
