@@ -1,13 +1,15 @@
-import XCTest
+import Testing
 @testable import test
 
-final class testTests: XCTestCase {
-    
-    func testExample() throws {
-        XCTAssertEqual(test().text, "Hello, World!")
+@Suite("testTests")
+struct testTests {
+    @Test("example")
+    func testExample() {
+        #expect(test().text == "Hello, World!")
     }
-    
-    func testTest222Example() throws {
-        XCTAssertEqual(test().text, "1Hello, World!")
+
+    @Test("test222 example")
+    func testTest222Example() {
+        #expect(test().text == "1Hello, World!")
     }
 }
