@@ -1,15 +1,17 @@
 import Testing
-@testable import test
+@testable 
+import test
 
-@Suite("testTests")
+@Suite
 struct testTests {
-    @Test("example")
-    func testExample() {
+  
+    @Test
+    func example() {
         #expect(test().text == "Hello, World!")
     }
-
-    @Test("test222 example")
-    func testTest222Example() {
-        #expect(test().text == "1Hello, World!")
+  
+    @Test
+    func prefixedHelloWorld() throws {
+        #expect(test().text == "Hello, World!")
     }
 }
