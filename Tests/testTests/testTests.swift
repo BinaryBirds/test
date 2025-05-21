@@ -7,7 +7,7 @@ final class testTests: XCTestCase {
         XCTAssertEqual(test().text, "Hello, World!")
     }
     
-    func testTest222Example() throws {
-        XCTAssertEqual(test().text, "1Hello, World!")
+    func testPrefixedHelloWorld() throws {
+        XCTAssertEqual(test().text, "Hello, World!")
     }
 }
